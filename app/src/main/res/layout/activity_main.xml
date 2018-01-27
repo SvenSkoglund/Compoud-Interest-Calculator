@@ -39,27 +39,60 @@
         app:layout_constraintLeft_toRightOf="@id/Vertguideline" />
 
     <EditText
+        android:id="@+id/principalText"
+        android:inputType="number"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@id/guideline1"
         app:layout_constraintRight_toLeftOf="@id/Vertguideline2" />
 
     <EditText
+        android:id="@+id/interestRateText"
+        android:inputType="number"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@id/guideline2"
         app:layout_constraintRight_toLeftOf="@id/Vertguideline2" />
     <EditText
+        android:id="@+id/compoundsPerYearText"
+        android:inputType="number"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@id/guideline3"
         app:layout_constraintRight_toLeftOf="@id/Vertguideline2" />
     <EditText
+        android:id="@+id/yearsText"
+        android:inputType="number"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@id/guideline4"
         app:layout_constraintRight_toLeftOf="@id/Vertguideline2" />
 
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        app:layout_constraintLeft_toRightOf="@id/Vertguideline"
+        app:layout_constraintTop_toBottomOf="@+id/guideline5"/>
+
+    <Button
+        android:id="@+id/clearButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        app:layout_constraintRight_toLeftOf="@id/Vertguideline2"
+        app:layout_constraintTop_toBottomOf="@+id/guideline5"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/resultText"
+        android:padding="20dp"
+        android:text="Testing Testing"
+        app:layout_constraintLeft_toRightOf="@+id/Vertguideline"
+        app:layout_constraintRight_toLeftOf="@id/Vertguideline2"
+        app:layout_constraintTop_toBottomOf="@+id/calculateButton"/>
 
     <android.support.constraint.Guideline
         android:id="@+id/Vertguideline"
@@ -100,4 +133,11 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.325" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.375" />
 </android.support.constraint.ConstraintLayout>
